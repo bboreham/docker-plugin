@@ -76,16 +76,6 @@ store" when you start it; for example, an etcd installation.
 There's no specific documentation of using a cluster store, but the
 first part of [this guide](https://github.com/docker/docker/blob/master/docs/userguide/networking/get-started-overlay.md) may help.
 
-### Only one network at a time
-
-In general, libnetwork requires drivers to isolate networks from each
-other. However, in Weave all addresses are on the same network;
-although they can be on different subnets, the plugin cannot guarantee
-that libnetwork's IPAM will arrange that in the appropriate way.
-
-As a result, for the moment you can have only one network at
-a time.
-
 ### Recovery after restarts
 
 There is no way provided by libnetwork for the plugin to get its
